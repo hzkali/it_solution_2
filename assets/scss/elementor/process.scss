@@ -1,0 +1,61 @@
+.ct-process-grid1 {
+	text-align: center;
+	.item--number {
+		font-weight: 700;
+		color: #000;
+		@include font-family-heading($heading_default_font);
+		font-size: 100px;
+		line-height: 1;
+		position: relative;
+		display: inline-block;
+		margin: 0 auto 12px auto;
+		@media #{$max-lg} {
+			font-size: 80px;
+		}
+	}
+	.item--title {
+		font-size: 24px;
+	}
+	.item--description {
+		font-size: 15px;
+		line-height: 1.73;
+		letter-spacing: 0.01em;
+	}
+	.item--icon {
+		width: 45px;
+		height: 45px;
+		position: absolute;
+		top: 6px;
+		left: -30px;
+		color: #fff;
+		border-radius: 45px;
+		background-color: $primary_color;
+		font-size: 24px;
+		i {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+		}
+	}
+	.item--inner {
+		padding: 0 15px;
+		margin-bottom: 50px;
+		position: relative;
+		.item--line {
+			content: '';
+			position: absolute;
+			top: 52px;
+			left: -83px;
+			width: 126px;
+			height: 0;
+			border-bottom: 2px dashed rgba(#d8d8d9, 0.8);
+			@media #{$max-lg} {
+				display: none;
+			}
+		}
+	}
+	.grid-item:nth-child(1) .item--inner .item--line {
+		display: none;
+	}
+}
